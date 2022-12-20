@@ -5,8 +5,21 @@ from app import celery
 view_bp = Blueprint("index", __name__)
 
 
+
 @view_bp.route("/")
-def home():
+def index():
+    return redirect('/admin')
+
+
+@view_bp.route("/pedidos")
+def pedidos():
     return render_template("dashboard.html")
+
+
+@view_bp.route("/marcas")
+def marcas():
+    return render_template("marcas.html")
+
+
 
 

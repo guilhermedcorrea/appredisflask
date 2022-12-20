@@ -24,10 +24,11 @@ app.config['SQLALCHEMY_MAX_OVERFLOW'] = 0
 
 
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+#migrate = Migrate(app, db)
 celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'])
 celery.conf.update(app.config)
 
-
-from app.views.views import view_bp
-app.register_blueprint(view_bp)
+with app.app_context():
+    from app.views.views import view_bp
+    from app.admin import admin
+    app.register_blueprint(view_bp)

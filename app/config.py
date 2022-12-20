@@ -22,4 +22,7 @@ databaseuri = urllib.parse.quote_plus("DRIVER={ODBC Driver 17 for SQL Server};"
                                  f"UID={usuario};"
                                  f"PWD={password}")
 
+
+uploads = r'C:\Users\Guilherme\Documents\ecommercefllaskapp\appredisflask\app\uploads'
+
 SQLALCHEMY_DATABASE_URI= ("mssql+pyodbc:///?odbc_connect=%s" % databaseuri)
