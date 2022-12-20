@@ -1,1 +1,1 @@
-#Teste com Celery e Regis - Modelo mvc
+#Teste com Celery e Redis - Modelo mvc
