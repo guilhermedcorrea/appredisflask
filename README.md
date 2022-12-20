@@ -1,0 +1,1 @@
+#Teste com Celery e Regis - Modelo mvc
